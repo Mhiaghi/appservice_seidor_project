@@ -26,7 +26,7 @@ app.config.from_object(DevelopmentConfig)
 ######################################################
 @app.route("/")
 def index_page():
-    return "Hello world"
+    return "Hello world2"
 
 @app.route("/datos")
 def show_data():
