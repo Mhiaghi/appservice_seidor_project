@@ -26,8 +26,19 @@ app.config.from_object(DevelopmentConfig)
 ######################################################
 @app.route("/")
 def index_page():
-    return "Test Seidor"
+    return "Hello world"
 
+@app.route("/datos")
+def show_data():
+    return "datos"
+
+@app.route("/funciones", methods = ["POST", "GET"])
+def get_data_from_functions():
+    if request.method == "POST":
+        content = request.json
+        print(content)
+        return content
+    return "OK"
 
 if __name__ == '__main__':
     app.run()
