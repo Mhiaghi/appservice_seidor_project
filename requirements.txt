@@ -3,4 +3,3 @@ flask_cors
 requires.io
 pymysql
 matplotlib
-base64
